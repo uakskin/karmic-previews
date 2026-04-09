@@ -1,0 +1,781 @@
+<!-- SUNLIGHT SERUM LANDING PAGE &#8212; Conversion-optimised, mobile-first -->
+<!-- Designed for Shopify Pages: paste everything below into the page HTML editor -->
+<!-- Judge.me widget requires Judge.me app installed on the store -->
+
+<style>
+  /* ========== HIDE THEME HEADER, ANNOUNCEMENT BAR & FOOTER ========== */
+  .announcement-bar, .header-wrapper, #shopify-section-header,
+  #shopify-section-announcement-bar, .shopify-section-header,
+  .shopify-section-announcement-bar, header.header, .site-header,
+  footer.footer, .footer, #shopify-section-footer, .shopify-section-footer,
+  .site-footer { display: none !important; }
+  main#MainContent, .main-content { padding-top: 0 !important; margin-top: 0 !important; }
+  .page-width, .shopify-section-template--page, .template-page,
+  .rte, .rte--page, main#MainContent, .main-content,
+  .shopify-section, .page-container { max-width: none !important; padding: 0 !important; margin: 0 !important; overflow: visible !important; }
+  html, body { overflow-x: hidden !important; max-width: 100vw !important; }
+  /* ========== RESET & BASE ========== */
+  .ss-lp * { margin: 0; padding: 0; box-sizing: border-box; }
+  .ss-lp { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; color: #2a2a2a; line-height: 1.6; overflow-x: clip; max-width: 100%; }
+  .ss-lp img { max-width: 100%; height: auto; display: block; }
+  .ss-lp a { text-decoration: none; color: inherit; }
+  .ss-lp section { padding: 48px 20px; }
+
+  /* ========== TYPOGRAPHY ========== */
+  .ss-lp .headline-xl { font-family: Georgia, 'Times New Roman', serif; font-size: clamp(36px, 9vw, 64px); line-height: 1.05; font-weight: 700; letter-spacing: -0.02em; }
+  .ss-lp .headline-lg { font-family: Georgia, 'Times New Roman', serif; font-size: clamp(26px, 6vw, 42px); line-height: 1.15; font-weight: 700; letter-spacing: -0.01em; }
+  .ss-lp .headline-md { font-family: Georgia, 'Times New Roman', serif; font-size: clamp(22px, 5vw, 32px); line-height: 1.2; font-weight: 700; }
+  .ss-lp .headline-sm { font-family: Georgia, 'Times New Roman', serif; font-size: clamp(18px, 4vw, 24px); line-height: 1.3; font-weight: 700; }
+  .ss-lp .body-lg { font-size: clamp(16px, 3.5vw, 19px); line-height: 1.7; }
+  .ss-lp .body-md { font-size: clamp(15px, 3vw, 17px); line-height: 1.65; }
+  .ss-lp .body-sm { font-size: clamp(13px, 2.5vw, 15px); line-height: 1.6; }
+  .ss-lp .text-muted { color: #6b6b6b; }
+  .ss-lp .text-burgundy { color: #8B1A2B; }
+  .ss-lp .text-gold { color: #B8860B; }
+  .ss-lp .text-center { text-align: center; }
+
+  /* ========== LAYOUT ========== */
+  .ss-lp .container { max-width: 680px; margin: 0 auto; }
+  .ss-lp .container-wide { max-width: 900px; margin: 0 auto; }
+
+  /* ========== COLOURS & BACKGROUNDS ========== */
+  .ss-lp .bg-cream { background: #FDF8F0; }
+  .ss-lp .bg-white { background: #FFFFFF; }
+  .ss-lp .bg-dark { background: #1a1410; color: #F5E6D0; }
+  .ss-lp .bg-burgundy { background: #8B1A2B; color: #fff; }
+  .ss-lp .bg-warm { background: linear-gradient(180deg, #FDF8F0 0%, #F5E6D0 100%); }
+
+  /* ========== STICKY ANNOUNCEMENT BAR ========== */
+  .ss-lp .sticky-bar { position: fixed; top: 0; left: 0; right: 0; z-index: 10000; background: #8B1A2B; color: #fff; padding: 10px 16px; text-align: center; font-size: 14px; font-weight: 600; letter-spacing: 0.03em; }
+  .ss-lp .hero { padding-top: 40px; }
+  .ss-lp .sticky-bar .timer { font-family: 'Courier New', monospace; font-size: 16px; font-weight: 700; margin-left: 6px; }
+
+  /* ========== HERO SECTION ========== */
+  .ss-lp .hero { padding: 8px 20px 24px; text-align: center; background: linear-gradient(180deg, #FDF8F0 0%, #FFFFFF 100%); }
+  .ss-lp .hero .badge-row { display: flex; justify-content: center; gap: 12px; flex-wrap: wrap; margin-bottom: 10px; }
+  .ss-lp .hero .badge { display: inline-flex; align-items: center; gap: 6px; background: #fff; border: 1.5px solid #E8D5B5; border-radius: 12px; padding: 5px 12px; font-size: 12px; font-weight: 600; color: #5a4a3a; }
+  .ss-lp .hero .badge svg { width: 12px; height: 12px; }
+  .ss-lp .hero .product-name { font-size: 13px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: #B8860B; margin-top: 6px; }
+  .ss-lp .hero .hero-sub { max-width: 520px; margin: 4px auto 0; color: #5a4a3a; font-size: clamp(13px, 2.8vw, 16px); line-height: 1.45; }
+  .ss-lp .hero-img-wrap { max-width: 240px; margin: 16px auto 0; position: relative; }
+  .ss-lp .hero-img-wrap img { border-radius: 12px; }
+  .ss-lp .hero .review-count { display: inline-flex; align-items: center; gap: 6px; margin-top: 10px; font-size: 13px; color: #8B6914; font-weight: 600; }
+  .ss-lp .hero .stars { color: #D4A017; font-size: 14px; letter-spacing: 2px; }
+
+  /* ========== HERO CAROUSEL ========== */
+  .ss-lp .hero-carousel { position: relative; width: 100%; max-width: 520px; margin: 14px auto 0; border-radius: 16px; overflow: hidden; background: #f5efe5; }
+  .ss-lp .hero-slides { display: flex; transition: transform 0.35s ease; will-change: transform; }
+  .ss-lp .hero-slide { flex: 0 0 100%; position: relative; aspect-ratio: 1 / 1; }
+  .ss-lp .hero-slide img { width: 100%; height: 100%; object-fit: cover; display: block; }
+  .ss-lp .hero-slide .slide-caption { position: absolute; left: 0; right: 0; bottom: 0; padding: 12px 16px 14px; background: linear-gradient(0deg, rgba(0,0,0,0.65) 0%, rgba(0,0,0,0) 100%); color: #fff; text-align: left; }
+  .ss-lp .hero-slide .slide-caption strong { display: block; font-size: 14px; font-weight: 700; margin-bottom: 2px; }
+  .ss-lp .hero-slide .slide-caption span { font-size: 12px; opacity: 0.85; }
+  .ss-lp .carousel-arrow { position: absolute; top: 50%; transform: translateY(-50%); background: rgba(255,255,255,0.9); border: none; width: 36px; height: 36px; border-radius: 50%; cursor: pointer; display: flex; align-items: center; justify-content: center; box-shadow: 0 2px 8px rgba(0,0,0,0.1); z-index: 2; transition: all 0.2s; }
+  .ss-lp .carousel-arrow:hover { background: #fff; transform: translateY(-50%) scale(1.05); }
+  .ss-lp .carousel-arrow svg { width: 18px; height: 18px; fill: #2a2a2a; }
+  .ss-lp .carousel-arrow.prev { left: 10px; }
+  .ss-lp .carousel-arrow.next { right: 10px; }
+  .ss-lp .carousel-dots { display: flex; justify-content: center; gap: 6px; margin-top: 10px; }
+  .ss-lp .carousel-dot { width: 7px; height: 7px; border-radius: 50%; background: #d4c9b5; border: none; cursor: pointer; padding: 0; transition: all 0.2s; }
+  .ss-lp .carousel-dot.active { background: #8B1A2B; width: 22px; border-radius: 100px; }
+  @media (min-width: 640px) {
+    .ss-lp .hero { padding: 32px 20px; }
+    .ss-lp .hero-carousel { max-width: 480px; }
+  }
+
+  /* ========== CTA BUTTON ========== */
+  .ss-lp .cta-btn { display: inline-block; background: #8B1A2B; color: #fff; font-size: 17px; font-weight: 700; padding: 16px 40px; border-radius: 3.75rem; border: none; cursor: pointer; transition: all 0.2s; letter-spacing: 0.02em; width: 100%; max-width: 480px; text-align: center; }
+  @media (max-width: 639px) { .ss-lp .cta-btn { max-width: none; } }
+  .ss-lp .mini-review { background: #FDF8F0; border: 1px solid #E8D5B5; border-radius: 10px; padding: 12px 16px; margin-top: 12px; max-width: 480px; margin-left: auto; margin-right: auto; text-align: left; }
+  .ss-lp .mini-review .mr-stars { color: #D4A017; font-size: 13px; letter-spacing: 1px; }
+  .ss-lp .mini-review .mr-text { font-size: 13px; line-height: 1.5; color: #3d3d3d; font-style: italic; margin-top: 4px; }
+  .ss-lp .mini-review .mr-author { font-size: 11px; font-weight: 700; color: #6b6b6b; margin-top: 4px; }
+  .ss-lp .cta-btn:hover { background: #6d1422; transform: translateY(-1px); box-shadow: 0 4px 16px rgba(139,26,43,0.25); }
+  .ss-lp .cta-btn-outline { display: inline-block; background: transparent; color: #8B1A2B; font-size: 16px; font-weight: 700; padding: 14px 36px; border-radius: 3.75rem; border: 2px solid #8B1A2B; cursor: pointer; transition: all 0.2s; width: 100%; max-width: 400px; text-align: center; }
+  .ss-lp .cta-btn-outline:hover { background: #8B1A2B; color: #fff; }
+  .ss-lp .cta-wrap { text-align: center; margin-top: 24px; }
+  .ss-lp .cta-sub { font-size: 13px; color: #8a8a8a; margin-top: 8px; }
+  .ss-lp .shipping-note { display: inline-block; background: #FFF8E7; border: 1px solid #E8D5B5; border-radius: 8px; padding: 8px 16px; margin-top: 10px; font-size: 14px; color: #5a4a3a; }
+  .ss-lp .shipping-note strong { color: #8B1A2B; }
+  .ss-lp .shipping-upgrade { font-size: 13px; color: #2E7D32; margin-top: 6px; font-weight: 600; }
+  .ss-lp .total-line { font-size: 15px; color: #3d3d3d; margin-top: 6px; font-weight: 600; }
+  .ss-lp .trust-badges { display: flex; justify-content: center; gap: 16px; flex-wrap: wrap; margin-top: 10px; }
+  .ss-lp .trust-badge { font-size: 11px; color: #6b6b6b; display: flex; align-items: center; gap: 4px; }
+  .ss-lp .trust-badge svg { width: 14px; height: 14px; flex-shrink: 0; }
+  .ss-lp .hero-benefits { list-style: none; text-align: left; max-width: 340px; margin: 12px auto 0; }
+  .ss-lp .hero-benefits li { font-size: 13px; color: #3d3d3d; padding: 3px 0; display: flex; align-items: center; gap: 6px; }
+  .ss-lp .hero-benefits li svg { width: 14px; height: 14px; flex-shrink: 0; color: #2E7D32; }
+  .ss-lp .hero-benefits li strong { color: #2a2a2a; }
+
+  /* ========== PRICE DISPLAY ========== */
+  .ss-lp .price-display { display: flex; align-items: baseline; justify-content: center; gap: 10px; margin: 12px 0; }
+  .ss-lp .price-new { font-size: 28px; font-weight: 800; color: #8B1A2B; }
+  .ss-lp .price-old { font-size: 18px; color: #aaa; text-decoration: line-through; }
+  .ss-lp .price-save { display: inline-block; background: #E8F5E9; color: #2E7D32; font-size: 13px; font-weight: 700; padding: 3px 10px; border-radius: 100px; }
+
+  /* ========== TICKER BAR ========== */
+  .ss-lp .press-bar { background: #f5f0e8; padding: 18px 20px 14px; max-width: 100%; border-top: 1px solid #e8dfd0; border-bottom: 1px solid #e8dfd0; text-align: center; }
+  .ss-lp .press-label { font-size: 10px; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; color: #9a8e7e; margin-bottom: 12px; }
+  .ss-lp .press-logos { display: flex; align-items: center; justify-content: center; flex-wrap: wrap; gap: 20px 28px; }
+  .ss-lp .press-logo { font-weight: 700; color: #1a1a1a; opacity: 0.35; line-height: 1; }
+  .ss-lp .press-logo.logo-vogue { font-family: 'Didot', 'Playfair Display', Georgia, serif; font-size: 22px; letter-spacing: 0.08em; text-transform: uppercase; }
+  .ss-lp .press-logo.logo-vf { font-family: 'Didot', 'Playfair Display', Georgia, serif; font-size: 13px; letter-spacing: 0.12em; text-transform: uppercase; font-weight: 900; }
+  .ss-lp .press-logo.logo-gq { font-family: 'Helvetica Neue', Arial, sans-serif; font-size: 26px; font-weight: 900; letter-spacing: -0.03em; }
+  .ss-lp .press-logo.logo-tatler { font-family: 'Didot', 'Playfair Display', Georgia, serif; font-size: 18px; letter-spacing: 0.18em; text-transform: uppercase; }
+  .ss-lp .press-logo.logo-elle { font-family: 'Helvetica Neue', Arial, sans-serif; font-size: 20px; font-weight: 900; letter-spacing: 0.12em; text-transform: uppercase; }
+  .ss-lp .press-logo.logo-stylist { font-family: Georgia, serif; font-size: 16px; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; }
+  .ss-lp .press-logo.logo-mirror { font-family: 'Helvetica Neue', Arial, sans-serif; font-weight: 900; font-size: 14px; letter-spacing: 0.02em; text-transform: uppercase; line-height: 1.1; }
+  .ss-lp .press-logo.logo-mirror span { display: block; font-size: 8px; letter-spacing: 0.15em; font-weight: 800; }
+  .ss-lp .press-logo.logo-mc { font-family: 'Didot', 'Playfair Display', Georgia, serif; font-size: 13px; letter-spacing: 0.1em; text-transform: uppercase; }
+
+  /* ========== EMOTIONAL MIRROR SECTION ========== */
+  .ss-lp .empathy { padding: 52px 20px; }
+  .ss-lp .empathy p { margin-bottom: 18px; color: #3d3d3d; }
+  .ss-lp .empathy .em-highlight { font-family: Georgia, serif; font-size: clamp(20px, 4.5vw, 28px); font-weight: 700; color: #8B1A2B; font-style: italic; margin-top: 28px; }
+
+  /* ========== MECHANISM SECTION ========== */
+  .ss-lp .mechanism { padding: 52px 20px; }
+  .ss-lp .mechanism p { margin-bottom: 16px; }
+  .ss-lp .ingredient-card { background: #fff; border: 1.5px solid #E8D5B5; border-radius: 12px; padding: 28px 24px; margin-top: 24px; }
+  .ss-lp .ingredient-card .ing-label { font-size: 12px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: #B8860B; margin-bottom: 6px; }
+  .ss-lp .ingredient-card .ing-name { font-family: Georgia, serif; font-size: 22px; font-weight: 700; color: #2a2a2a; margin-bottom: 12px; }
+  .ss-lp .ingredient-card p { color: #4a4a4a; font-size: 15px; line-height: 1.65; margin-bottom: 12px; }
+  .ss-lp .ingredient-card .ing-outcome { font-weight: 600; color: #2a2a2a; border-top: 1px solid #f0e8d8; padding-top: 12px; margin-top: 12px; }
+
+  /* ========== SOCIAL PROOF / REVIEWS ========== */
+  .ss-lp .reviews-section { padding: 52px 20px; }
+  .ss-lp .review-card { background: #fff; border-radius: 12px; padding: 24px; margin-bottom: 16px; box-shadow: 0 1px 4px rgba(0,0,0,0.06); border: 1px solid #f0ebe3; }
+  .ss-lp .review-card .review-stars { color: #D4A017; font-size: 16px; letter-spacing: 2px; margin-bottom: 10px; }
+  .ss-lp .review-card .review-text { font-size: 15px; line-height: 1.65; color: #3d3d3d; font-style: italic; margin-bottom: 12px; }
+  .ss-lp .review-card .review-author { font-size: 13px; font-weight: 700; color: #5a4a3a; }
+  .ss-lp .review-card .review-location { font-size: 13px; color: #9a9a9a; }
+  .ss-lp .review-card .verified { font-size: 11px; color: #2E7D32; font-weight: 600; text-transform: uppercase; letter-spacing: 0.05em; }
+
+  /* ========== FORMULA SECTION ========== */
+  .ss-lp .formula-grid { display: grid; grid-template-columns: 1fr; gap: 16px; margin-top: 28px; }
+  .ss-lp .formula-stat { text-align: center; padding: 24px 16px; background: #fff; border-radius: 12px; border: 1.5px solid #E8D5B5; }
+  .ss-lp .formula-stat .stat-number { font-family: Georgia, serif; font-size: 36px; font-weight: 700; color: #8B1A2B; margin-bottom: 4px; }
+  .ss-lp .formula-stat .stat-label { font-size: 14px; color: #6b6b6b; }
+  .ss-lp .provenance { margin-top: 28px; padding: 20px; border-radius: 12px; background: #f8f3eb; font-size: 14px; color: #6b6b6b; text-align: center; }
+  .ss-lp .provenance strong { color: #5a4a3a; }
+
+  /* ========== HOW TO USE ========== */
+  .ss-lp .steps { counter-reset: step; margin-top: 28px; }
+  .ss-lp .step-item { display: flex; gap: 16px; margin-bottom: 24px; align-items: flex-start; }
+  .ss-lp .step-num { flex-shrink: 0; width: 40px; height: 40px; border-radius: 50%; background: #8B1A2B; color: #fff; font-family: Georgia, serif; font-size: 18px; font-weight: 700; display: flex; align-items: center; justify-content: center; }
+  .ss-lp .step-body h4 { font-size: 17px; font-weight: 700; margin-bottom: 4px; }
+  .ss-lp .step-body p { font-size: 15px; color: #5a5a5a; }
+  .ss-lp .tip-box { background: linear-gradient(135deg, #FDF8F0, #F5E6D0); border-radius: 12px; padding: 20px 24px; margin-top: 20px; border-left: 4px solid #D4A017; }
+  .ss-lp .tip-box p { font-size: 15px; color: #5a4a3a; }
+
+  /* ========== BUNDLE SECTION ========== */
+  .ss-lp .bundle-section { padding: 52px 20px; }
+  .ss-lp .bundle-card { background: #fff; border-radius: 16px; border: 2px solid #D4A017; padding: 32px 24px; text-align: center; position: relative; overflow: hidden; }
+  .ss-lp .bundle-card .bundle-badge { position: absolute; top: 16px; right: -32px; background: #D4A017; color: #fff; font-size: 12px; font-weight: 800; padding: 4px 40px; transform: rotate(45deg); letter-spacing: 0.05em; }
+  .ss-lp .bundle-images { display: flex; justify-content: center; gap: 16px; margin: 20px 0; }
+  .ss-lp .bundle-images img { width: 120px; height: 120px; object-fit: contain; border-radius: 8px; }
+  .ss-lp .bundle-name { font-family: Georgia, serif; font-size: 24px; font-weight: 700; margin-bottom: 4px; }
+  .ss-lp .bundle-desc { font-size: 15px; color: #6b6b6b; margin-bottom: 16px; }
+  .ss-lp .bundle-perks { list-style: none; margin: 16px 0; text-align: left; max-width: 320px; margin-left: auto; margin-right: auto; }
+  .ss-lp .bundle-perks li { font-size: 14px; padding: 6px 0; color: #3d3d3d; display: flex; align-items: center; gap: 8px; }
+  .ss-lp .bundle-perks li::before { content: ""; display: inline-block; width: 18px; height: 18px; background: #E8F5E9; border-radius: 50%; flex-shrink: 0; background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%232E7D32'%3E%3Cpath d='M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z'/%3E%3C/svg%3E"); background-size: 12px; background-repeat: no-repeat; background-position: center; }
+
+  /* ========== FAQ ========== */
+  .ss-lp .faq-item { border-bottom: 1px solid #e8e0d5; padding: 20px 0; cursor: pointer; }
+  .ss-lp .faq-item:last-child { border-bottom: none; }
+  .ss-lp .faq-q { display: flex; justify-content: space-between; align-items: center; font-size: 16px; font-weight: 700; color: #2a2a2a; }
+  .ss-lp .faq-q .faq-icon { font-size: 22px; color: #8B1A2B; transition: transform 0.2s; flex-shrink: 0; margin-left: 12px; }
+  .ss-lp .faq-a { max-height: 0; overflow: hidden; transition: max-height 0.3s ease, padding 0.3s ease; }
+  .ss-lp .faq-a-inner { padding-top: 12px; font-size: 15px; line-height: 1.65; color: #5a5a5a; }
+  .ss-lp .faq-item.open .faq-a { max-height: 300px; }
+  .ss-lp .faq-item.open .faq-icon { transform: rotate(45deg); }
+
+  /* ========== FINAL CTA ========== */
+  .ss-lp .final-cta { padding: 60px 20px; text-align: center; }
+  .ss-lp .trust-row { display: flex; justify-content: center; gap: 20px; flex-wrap: wrap; margin-top: 20px; }
+  .ss-lp .trust-item { font-size: 13px; color: #8a8a8a; display: flex; align-items: center; gap: 6px; }
+
+  /* ========== STICKY MOBILE CTA ========== */
+  .ss-lp .mobile-sticky-cta { display: none; position: fixed; bottom: 0; left: 0; right: 0; z-index: 999; background: #fff; padding: 12px 16px; box-shadow: 0 -2px 12px rgba(0,0,0,0.1); border-top: 1px solid #eee; }
+  .ss-lp .mobile-sticky-cta .cta-btn { width: 100%; max-width: none; padding: 14px; font-size: 16px; }
+  .ss-lp .mobile-sticky-cta .sticky-price { display: flex; align-items: center; justify-content: center; gap: 8px; margin-bottom: 8px; }
+
+  /* ========== JUDGE.ME WIDGET ========== */
+  .ss-lp .judgeme-widget { margin-top: 24px; }
+
+  /* ========== RESPONSIVE ========== */
+  @media (min-width: 640px) {
+    .ss-lp section { padding: 64px 32px; }
+    .ss-lp .formula-grid { grid-template-columns: repeat(3, 1fr); }
+    .ss-lp .bundle-images img { width: 160px; height: 160px; }
+  }
+  @media (max-width: 639px) {
+    .ss-lp .mobile-sticky-cta { display: block; }
+    .ss-lp .final-cta { padding-bottom: 100px; }
+  }
+  @media (min-width: 900px) {
+    .ss-lp .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 32px; align-items: center; }
+    .ss-lp .two-col-reverse { direction: rtl; }
+    .ss-lp .two-col-reverse > * { direction: ltr; }
+  }
+
+  /* ========== ANIMATIONS ========== */
+  .ss-lp .fade-in { opacity: 0; transform: translateY(20px); transition: opacity 0.6s ease, transform 0.6s ease; }
+  .ss-lp .fade-in.visible { opacity: 1; transform: translateY(0); }
+</style>
+
+<div class="ss-lp">
+
+  <!-- ========== STICKY COUNTDOWN BAR ========== -->
+  <div class="sticky-bar" id="ss-countdown-bar">
+    <span>Your 25% discount expires in</span>
+    <span class="timer" id="ss-timer">14:59</span>
+  </div>
+
+  <!-- ========== HERO ========== -->
+  <section class="hero">
+    <div class="container">
+      <h1 class="headline-xl">Pigmentation<br><span class="text-burgundy">Meets Its Match</span></h1>
+      <p class="body-lg hero-sub">Sunlight Serum contains Organic Kashmiri Saffron that fades dark spots, while oil-soluble Vitamin C brightens deep below the surface.</p>
+
+      <!-- Full-width image carousel -->
+      <div class="hero-carousel" id="ss-carousel">
+        <div class="hero-slides" id="ss-slides">
+          <div class="hero-slide">
+            <img src="https://cdn.shopify.com/s/files/1/0549/8745/6601/files/3_5c24e17a-1233-4118-bc37-2eee77eaa9c8.png?v=1742757370" alt="Sunlight Serum bottle" loading="eager">
+          </div>
+          <div class="hero-slide">
+            <img src="https://cdn.shopify.com/s/files/1/0549/8745/6601/files/14_9fec54d1-82ce-48e1-8b66-2b56b56bce91.jpg?v=1742757370" alt="Kashmiri Saffron and Vitamin C key ingredients" loading="lazy">
+          </div>
+          <div class="hero-slide">
+            <img src="https://cdn.shopify.com/s/files/1/0549/8745/6601/files/13_0d6fe30b-fd8b-47b2-abde-7b0853664458.jpg?v=1742757370" alt="Before and after Sunlight Serum results" loading="lazy">
+          </div>
+          <div class="hero-slide">
+            <img src="https://cdn.shopify.com/s/files/1/0549/8745/6601/files/12_cef2993c-6053-4686-a827-2ee221b13277.jpg?v=1742757370" alt="Sunlight Serum application" loading="lazy">
+          </div>
+          <div class="hero-slide">
+            <img src="https://cdn.shopify.com/s/files/1/0549/8745/6601/files/15_0a016e90-7a02-4dff-9cd1-15e4b0e8f006.jpg?v=1742757370" alt="Sunlight Serum texture" loading="lazy">
+          </div>
+        </div>
+        <button class="carousel-arrow prev" id="ss-prev" aria-label="Previous image"><svg viewBox="0 0 24 24"><path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"/></svg></button>
+        <button class="carousel-arrow next" id="ss-next" aria-label="Next image"><svg viewBox="0 0 24 24"><path d="M8.59 16.59L10 18l6-6-6-6-1.41 1.41L13.17 12z"/></svg></button>
+      </div>
+      <div class="carousel-dots" id="ss-dots">
+        <button class="carousel-dot active" data-slide="0" aria-label="Slide 1"></button>
+        <button class="carousel-dot" data-slide="1" aria-label="Slide 2"></button>
+        <button class="carousel-dot" data-slide="2" aria-label="Slide 3"></button>
+        <button class="carousel-dot" data-slide="3" aria-label="Slide 4"></button>
+        <button class="carousel-dot" data-slide="4" aria-label="Slide 5"></button>
+      </div>
+
+      <!-- Price + benefits block -->
+      <div style="margin-top:16px; text-align:center;">
+        <div class="price-display" style="margin:0;">
+          <span class="price-new">&#163;21.75</span>
+          <span class="price-old">&#163;29.00</span>
+          <span class="price-save">Save 25%</span>
+        </div>
+        <div class="review-count" style="margin-top:4px;">
+          <span class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+          <span>4.72 &#183; 1,500+ verified reviews</span>
+        </div>
+        <ul class="hero-benefits" style="margin:10px auto 0;">
+          <li><svg viewBox="0 0 24 24" fill="#2E7D32"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg> <strong>Fades dark spots</strong> at source</li>
+          <li><svg viewBox="0 0 24 24" fill="#2E7D32"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg> <strong>21 active ingredients,</strong> 0% water</li>
+          <li><svg viewBox="0 0 24 24" fill="#2E7D32"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg> <strong>25,000+ units sold</strong> &#183; UK bestseller</li>
+        </ul>
+      </div>
+
+      <div class="cta-wrap" style="margin-top:14px;">
+        <a href="/discount/SUNLIGHT25?redirect=/cart/40403778502745:1" class="cta-btn" id="ss-cta-hero">Add to Cart - &#163;25.74</a>
+        <p class="total-line">&#163;21.75 + &#163;3.99 shipping = <strong>&#163;25.74 delivered</strong></p>
+        <div class="trust-badges">
+          <span class="trust-badge"><svg viewBox="0 0 24 24" fill="#6b6b6b"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4z"/></svg> 30-day guarantee</span>
+          <span class="trust-badge"><svg viewBox="0 0 24 24" fill="#6b6b6b"><path d="M20 8h-3V4H3c-1.1 0-2 .9-2 2v11h2c0 1.66 1.34 3 3 3s3-1.34 3-3h6c0 1.66 1.34 3 3 3s3-1.34 3-3h2v-5l-3-4zM6 18.5c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5zm13.5-9l1.96 2.5H17V9.5h2.5zm-1.5 9c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5z"/></svg> Order today, ships tomorrow</span>
+          <span class="trust-badge"><svg viewBox="0 0 24 24" fill="#6b6b6b"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg> Vegan &amp; cruelty-free</span>
+        </div>
+        <a href="#bundle" class="shipping-upgrade" style="display:block; text-decoration:none; margin-top:8px;">&#8595; Add Moonlight Serum &amp; get free shipping + 30% off both</a>
+        <div class="mini-review">
+          <span class="mr-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+          <p class="mr-text">"The pigmentation has started to even out. Fine lines are not as prominent. I have for the first time in years received compliments on my skin."</p>
+          <span class="mr-author">Catherine M. &#183; Verified Buyer</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== SOCIAL PROOF TICKER ========== -->
+  <div class="press-bar">
+    <div class="press-label">As Seen In</div>
+    <div class="press-logos">
+      <span class="press-logo logo-vogue">Vogue</span>
+      <span class="press-logo logo-vf">Vanity Fair</span>
+      <span class="press-logo logo-gq">GQ</span>
+      <span class="press-logo logo-tatler">Tatler</span>
+      <span class="press-logo logo-elle">Elle</span>
+      <span class="press-logo logo-stylist">Stylist</span>
+      <span class="press-logo logo-mirror"><span>Daily</span>Mirror</span>
+      <span class="press-logo logo-mc">Marie Claire</span>
+    </div>
+  </div>
+
+  <!-- ========== EMOTIONAL MIRROR ========== -->
+  <section class="empathy bg-white fade-in">
+    <div class="container">
+      <h2 class="headline-lg">You know the feeling.</h2>
+      <p class="body-lg" style="margin-top:20px;">You catch your reflection and your eyes go straight to the same spots. The patches that foundation can't quite cover. The marks that seem to darken every summer no matter what you try.</p>
+      <p class="body-lg">You've bought the brightening serums. The ones that promised "visible results in 14 days" and delivered nothing but irritation.</p>
+      <p class="body-lg">You've tried the ones your friends recommended, the ones with ingredients you couldn't pronounce, the ones that sat on top of your skin and did nothing underneath it.</p>
+      <p class="body-lg">Pigmentation is stubborn. Not because your skin is broken &#8212; but because most products only work on the surface.</p>
+      <p class="em-highlight">Your skin deserves something that works deeper.</p>
+    </div>
+  </section>
+
+  <!-- ========== WHY MOST SERUMS FAIL (Mechanism Bridge) ========== -->
+  <section class="mechanism bg-cream fade-in">
+    <div class="container">
+      <h2 class="headline-lg">Why most brightening serums don't work</h2>
+      <p class="body-lg" style="margin-top:20px;">Dark spots and uneven tone form when your skin overproduces melanin &#8212; often triggered by sun exposure, hormonal shifts, or inflammation beneath the surface.</p>
+      <p class="body-lg">Most vitamin C serums use water-soluble ascorbic acid. It sits on top of the skin, oxidises quickly, and never reaches the deeper layers where pigmentation actually forms.</p>
+      <p class="body-lg">Sunlight Serum takes a different approach. Two hero ingredients. Two mechanisms. Working together below the surface.</p>
+    </div>
+  </section>
+
+  <!-- ========== INGREDIENT 1: SAFFRON ========== -->
+  <section class="mechanism bg-white fade-in">
+    <div class="container">
+      <div class="two-col">
+        <div>
+          <img src="https://cdn.shopify.com/s/files/1/0549/8745/6601/files/14_9fec54d1-82ce-48e1-8b66-2b56b56bce91.jpg?v=1742757370" alt="Kashmiri Saffron and Vitamin C ingredients in Sunlight Serum" style="border-radius:12px;" loading="lazy">
+        </div>
+        <div>
+          <div class="ingredient-card">
+            <div class="ing-label">Hero Ingredient 1</div>
+            <div class="ing-name">Organic Kashmiri Saffron</div>
+            <p><strong>The problem:</strong> Excess melanin clusters beneath the surface, forming visible dark spots and uneven patches.</p>
+            <p><strong>How it works:</strong> Saffron's active compounds help slow excess melanin production that contributes to visible pigmentation. Used for centuries across Indian skin science for luminous, even-toned skin.</p>
+            <p class="ing-outcome"><strong>The result:</strong> Existing dark spots gradually fade. New marks are less likely to form. Your natural tone comes through.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== INGREDIENT 2: VITAMIN C ========== -->
+  <section class="mechanism bg-cream fade-in">
+    <div class="container">
+      <div class="two-col two-col-reverse">
+        <div>
+          <img src="https://cdn.shopify.com/s/files/1/0549/8745/6601/files/12_cef2993c-6053-4686-a827-2ee221b13277.jpg?v=1742757370" alt="Sunlight Serum oil-soluble Vitamin C brightening serum" style="border-radius:12px;" loading="lazy">
+        </div>
+        <div>
+          <div class="ingredient-card">
+            <div class="ing-label">Hero Ingredient 2</div>
+            <div class="ing-name">Oil-Soluble Vitamin C</div>
+            <p><strong>The problem:</strong> Standard water-soluble Vitamin C oxidises on contact with air and can irritate sensitive skin.</p>
+            <p><strong>How it works:</strong> Ascorbyl Tetraisopalmitate stays stable, absorbs fully, and reaches the deeper skin layers where pigmentation begins. It supports collagen production and interrupts oxidative stress that triggers melanin overproduction &#8212; without redness or stinging.</p>
+            <p class="ing-outcome"><strong>The result:</strong> Brighter, more radiant skin that builds over weeks of consistent use. Gentle enough for sensitive and melanin-rich skin.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="cta-wrap" style="margin-top:36px;">
+        <a href="/discount/SUNLIGHT25?redirect=/cart/40403778502745:1" class="cta-btn">Add to Cart - &#163;25.74</a>
+        <p class="total-line">&#163;21.75 + &#163;3.99 shipping &#183; Was &#163;29.00</p>
+        <div class="trust-badges">
+          <span class="trust-badge"><svg viewBox="0 0 24 24" fill="#6b6b6b"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4z"/></svg> 30-day guarantee</span>
+          <span class="trust-badge"><svg viewBox="0 0 24 24" fill="#6b6b6b"><path d="M20 8h-3V4H3c-1.1 0-2 .9-2 2v11h2c0 1.66 1.34 3 3 3s3-1.34 3-3h6c0 1.66 1.34 3 3 3s3-1.34 3-3h2v-5l-3-4zM6 18.5c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5zm13.5-9l1.96 2.5H17V9.5h2.5zm-1.5 9c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5z"/></svg> Ships in 24hrs</span>
+        </div>
+        <a href="#bundle" class="shipping-upgrade" style="display:block; text-decoration:none;">&#8595; Or get the Day & Night Duo for &#163;40.60 with free shipping</a>
+        <div class="mini-review">
+          <span class="mr-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+          <p class="mr-text">"After a couple of weeks people started to comment on how well I was looking, how my skin was so plump and glowing. The dryness has completely gone."</p>
+          <span class="mr-author">Nicolette C. &#183; Verified Buyer</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== REVIEWS (Social Proof Wall) ========== -->
+  <section class="reviews-section bg-white fade-in">
+    <div class="container">
+      <h2 class="headline-lg text-center">Real results from<br><span class="text-burgundy">real women</span></h2>
+      <p class="body-md text-center text-muted" style="margin-top:8px;">4.72 average from 1,500+ verified reviews</p>
+
+      <div style="margin-top:28px;">
+        <div class="review-card">
+          <div class="review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+          <p class="review-text">"After a couple of weeks people started to comment on how well I was looking, how my skin was so plump and glowing. The dryness has completely gone, I haven't had a single breakout and I have the glow I have always dreamt about."</p>
+          <span class="review-author">Nicolette C.</span> <span class="review-location">&#183; Plymouth</span>
+          <br><span class="verified">&#10003; Verified Buyer</span>
+        </div>
+
+        <div class="review-card">
+          <div class="review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+          <p class="review-text">"The size of my pores have greatly reduced and the pigmentation has started to even out. Fine lines are not as prominent and no reaction from my sensitive skin. I have for the first time in years received compliments on my skin."</p>
+          <span class="review-author">Catherine M.</span> <span class="review-location">&#183; Lewisham</span>
+          <br><span class="verified">&#10003; Verified Buyer</span>
+        </div>
+
+        <div class="review-card">
+          <div class="review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+          <p class="review-text">"The serum is light and doesn't leave an oily residue &#8212; just a beautiful glow."</p>
+          <span class="review-author">S. Mann</span> <span class="review-location">&#183; High Wycombe</span>
+          <br><span class="verified">&#10003; Verified Buyer</span>
+        </div>
+
+        <div class="review-card">
+          <div class="review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+          <p class="review-text">"Works wonders for my very dry, mature skin."</p>
+          <span class="review-author">Paula B.</span> <span class="review-location">&#183; Sheffield</span>
+          <br><span class="verified">&#10003; Verified Buyer</span>
+        </div>
+      </div>
+
+      <!-- Judge.me Review Widget -->
+      <div class="judgeme-widget" style="margin-top:32px;">
+        <div class="jdgm-widget jdgm-review-widget" data-id="7234463432793" data-product-title="Sunlight Serum" data-product-url="/products/sunlight-serum"></div>
+      </div>
+      <div style="text-align:center; margin-top:16px;">
+        <a href="/products/sunlight-serum#judgeme_product_reviews" class="cta-btn-outline" style="max-width:300px;">Read All Reviews</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== FORMULA CREDIBILITY ========== -->
+  <section class="mechanism bg-cream fade-in">
+    <div class="container text-center">
+      <h2 class="headline-lg">100% active ingredients.<br><span class="text-burgundy">0% water.</span></h2>
+      <p class="body-lg" style="margin-top:16px;">Most serums are 60-80% water. Sunlight Serum contains none. Every drop is active &#8212; 21 plant-based ingredients working together. No fillers. No synthetic preservatives.</p>
+
+      <div class="formula-grid">
+        <div class="formula-stat">
+          <div class="stat-number">21</div>
+          <div class="stat-label">Active Ingredients</div>
+        </div>
+        <div class="formula-stat">
+          <div class="stat-number">18m</div>
+          <div class="stat-label">Shelf Life (vs 6-9m typical)</div>
+        </div>
+        <div class="formula-stat">
+          <div class="stat-number">0%</div>
+          <div class="stat-label">Water, Fillers, Parabens</div>
+        </div>
+      </div>
+
+      <div class="faq-item" onclick="this.classList.toggle('open')" style="margin-top:28px; border-top:1px solid #e8dfd0; border-bottom:1px solid #e8dfd0;">
+        <div class="faq-q">Full Ingredients List (21 actives)<span class="faq-icon">+</span></div>
+        <div class="faq-a"><div class="faq-a-inner" style="font-size:14px; line-height:1.8;">Coco-Caprylate/Caprate, Diheptyl Succinate, Capryloyl Glycerin, Simmondsia Chinensis (Jojoba) Seed Oil, Cannabis Sativa (Hemp) Seed Oil, Persea Gratissima (Avocado) Oil, Vegetable Squalane, Pongamia Glabra (Karanja) Seed Oil, Prunus Amygdalus Dulcis (Sweet Almond) Oil, Helianthus Annuus (Sunflower) Seed Oil, Daucus Carota Sativa (Carrot) Root Extract, Crocus Sativus (Saffron) Flower Extract, Mixed Tocopherols (Vitamin E), Citrus Aurantium Dulcis (Orange Peel) Oil, Lavandula Angustifolia (Lavender) Flower Oil, Salvia Sclarea (Clary Sage) Oil, Cananga Odorata (Ylang-Ylang) Flower Oil, Ascorbyl Tetraisopalmitate (Vitamin C), Withania Somnifera (Ashwagandha) Root Extract, Melia Azadirachta (Neem) Leaf Extract, Ocimum Sanctum (Holy Basil) Leaf CO2 Extract<br><br><strong>0% water &#183; 100% natural or naturally-derived &#183; Vegan &#183; Cruelty-free</strong></div></div>
+      </div>
+
+      <div class="provenance">
+        <strong>Vegan &#183; Cruelty-Free &#183; 100% Natural</strong><br>
+        Made at a 100% solar-powered, 85% woman-run, GMP-certified facility in India.
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== HOW TO USE ========== -->
+  <section class="bg-white fade-in">
+    <div class="container">
+      <h2 class="headline-lg text-center">Your morning ritual,<br><span class="text-burgundy">simplified</span></h2>
+
+      <div class="steps">
+        <div class="step-item">
+          <div class="step-num">1</div>
+          <div class="step-body">
+            <h4>Cleanse</h4>
+            <p>Start with clean, slightly damp skin.</p>
+          </div>
+        </div>
+        <div class="step-item">
+          <div class="step-num">2</div>
+          <div class="step-body">
+            <h4>Apply Sunlight Serum</h4>
+            <p>2-3 drops, pressed gently into skin. A little goes a long way &#8212; the formula is concentrated.</p>
+          </div>
+        </div>
+        <div class="step-item">
+          <div class="step-num">3</div>
+          <div class="step-body">
+            <h4>Protect</h4>
+            <p>Follow with your SPF. Or mix a drop into your foundation for a dewy, glowing finish.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="tip-box">
+        <p><strong>Tip:</strong> Pair with Moonlight Serum at night for 24-hour brightening support. More on that below.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== BUNDLE UPSELL ========== -->
+  <section class="bundle-section bg-cream fade-in" id="bundle">
+    <div class="container">
+      <h2 class="headline-lg text-center">Go further.<br><span class="text-burgundy">Brighten around the clock.</span></h2>
+      <p class="body-md text-center text-muted" style="margin-top:8px; max-width:500px; margin-left:auto; margin-right:auto;">Sunlight Serum works in the morning. Moonlight Serum works at night. Together, they support your skin 24 hours a day.</p>
+
+      <div class="bundle-card" style="margin-top:28px;">
+        <div class="bundle-badge">BEST VALUE</div>
+        <p class="body-sm text-gold" style="font-weight:700; letter-spacing:0.08em; text-transform:uppercase;">Limited Time Offer</p>
+        <div class="bundle-name">The Day & Night Duo</div>
+        <div class="bundle-desc">Sunlight Serum + Moonlight Serum</div>
+
+        <div class="bundle-images">
+          <img src="https://cdn.shopify.com/s/files/1/0549/8745/6601/files/3_5c24e17a-1233-4118-bc37-2eee77eaa9c8.png?v=1742757370" alt="Sunlight Serum" loading="lazy">
+          <img src="https://cdn.shopify.com/s/files/1/0549/8745/6601/files/Moonlight_Serum.png?v=1771400779" alt="Moonlight Serum" loading="lazy">
+        </div>
+
+        <div class="price-display">
+          <span class="price-new">&#163;40.60</span>
+          <span class="price-old">&#163;58.00</span>
+          <span class="price-save">Save &#163;17.40</span>
+        </div>
+        <p style="font-size:12px; color:#2E7D32; font-weight:700; margin-top:2px;">Total value &#163;61.99 (2 serums + shipping) &#8212; You pay &#163;40.60</p>
+
+        <ul class="bundle-perks">
+          <li>Sunlight Serum (morning brightening)</li>
+          <li>Moonlight Serum (overnight renewal)</li>
+          <li>30% off both serums</li>
+          <li>Free UK shipping (save &#163;3.99)</li>
+          <li>30-day money-back guarantee</li>
+        </ul>
+
+        <div class="cta-wrap" style="margin-top:20px;">
+          <a href="/discount/SERUMDUO30?redirect=/cart/40403778502745:1,40301111967833:1" class="cta-btn">Add to Cart - &#163;40.60</a>
+          <p class="cta-sub">Was &#163;58.00 + free shipping</p>
+        </div>
+      </div>
+
+      <div class="cta-wrap" style="margin-top:20px;">
+        <a href="/discount/SUNLIGHT25?redirect=/cart/40403778502745:1" class="cta-btn-outline">Just Sunlight Serum - &#163;25.74</a>
+        <p class="cta-sub">&#163;21.75 + &#163;3.99 shipping &#183; Was &#163;29.00</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== FAQ ========== -->
+  <section class="bg-white fade-in">
+    <div class="container">
+      <h2 class="headline-lg text-center">Questions before you buy</h2>
+
+      <div style="margin-top:28px;">
+        <div class="faq-item" onclick="this.classList.toggle('open')">
+          <div class="faq-q">How long before I see results?<span class="faq-icon">+</span></div>
+          <div class="faq-a"><div class="faq-a-inner">Most customers notice brighter, more even skin within 8-16 weeks of consistent daily use. Deeper pigmentation can take 16-24 weeks. Skin changes gradually &#8212; we will never promise overnight results because that is not how pigmentation works.</div></div>
+        </div>
+        <div class="faq-item" onclick="this.classList.toggle('open')">
+          <div class="faq-q">Will it irritate my sensitive skin?<span class="faq-icon">+</span></div>
+          <div class="faq-a"><div class="faq-a-inner">Sunlight Serum uses oil-soluble Vitamin C, which is significantly gentler than the water-soluble ascorbic acid found in most serums. No stinging, no redness. Formulated for all skin types, including sensitive and reactive skin.</div></div>
+        </div>
+        <div class="faq-item" onclick="this.classList.toggle('open')">
+          <div class="faq-q">I have melanin-rich skin. Will this work for me?<span class="faq-icon">+</span></div>
+          <div class="faq-a"><div class="faq-a-inner">Yes. Saffron has been used across Indian skin science for centuries specifically for deeper and melanin-rich skin tones. This serum does not bleach or lighten &#8212; it helps even out excess pigmentation while supporting your natural tone.</div></div>
+        </div>
+        <div class="faq-item" onclick="this.classList.toggle('open')">
+          <div class="faq-q">Will it feel greasy?<span class="faq-icon">+</span></div>
+          <div class="faq-a"><div class="faq-a-inner">No. Despite being oil-based, the formula absorbs fully and leaves a lightweight, dewy finish &#8212; not an oily residue. Many customers use it as a primer under makeup.</div></div>
+        </div>
+        <div class="faq-item" onclick="this.classList.toggle('open')">
+          <div class="faq-q">What if it doesn't work for me?<span class="faq-icon">+</span></div>
+          <div class="faq-a"><div class="faq-a-inner">We offer a 30-day money-back guarantee, even on opened products. If you're not happy, we'll refund you. No questions.</div></div>
+        </div>
+        <div class="faq-item" onclick="this.classList.toggle('open')">
+          <div class="faq-q">Is this suitable for all skin types?<span class="faq-icon">+</span></div>
+          <div class="faq-a"><div class="faq-a-inner">Yes. Sunlight Serum works on dry, oily, combination, sensitive, mature, and melanin-rich skin. The waterless, oil-based formula absorbs differently depending on your skin type &#8212; lighter on oily skin, more nourishing on dry skin.</div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== FINAL CTA ========== -->
+  <section class="final-cta bg-warm fade-in">
+    <div class="container">
+      <h2 class="headline-lg">Your skin remembers<br><span class="text-burgundy">what you give it.</span></h2>
+      <p class="body-lg" style="margin-top:16px;">25,000+ women have made Sunlight Serum part of their morning. Organic Kashmiri Saffron. Oil-soluble Vitamin C. 21 active ingredients, zero water.</p>
+
+      <div class="price-display" style="margin-top:20px;">
+        <span class="price-new">&#163;21.75</span>
+        <span class="price-old">&#163;29.00</span>
+        <span class="price-save">Save 25%</span>
+      </div>
+
+      <div class="cta-wrap">
+        <a href="/discount/SUNLIGHT25?redirect=/cart/40403778502745:1" class="cta-btn">Add to Cart - &#163;25.74</a>
+        <p class="total-line">&#163;21.75 + &#163;3.99 shipping &#183; Was &#163;29.00</p>
+      </div>
+
+      <div style="text-align:center; margin-top:16px;">
+        <a href="/discount/SERUMDUO30?redirect=/cart/40403778502745:1,40301111967833:1" class="cta-btn-outline" style="margin-top:12px;">Day & Night Duo - &#163;40.60 free shipping <span class="price-save" style="margin-left:8px;">Save 30%</span></a>
+      </div>
+
+      <div class="trust-row">
+        <span class="trust-item">&#127807; Vegan & Cruelty-Free</span>
+        <span class="trust-item">&#128230; Ships within 24hrs from UK</span>
+        <span class="trust-item">&#10003; 30-Day Money-Back Guarantee</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== STICKY MOBILE CTA ========== -->
+  <div class="mobile-sticky-cta" id="ss-mobile-cta">
+    <div class="sticky-price">
+      <span class="price-new" style="font-size:20px;">&#163;25.74 delivered</span>
+      <span class="price-old" style="font-size:14px;">&#163;29.00</span>
+      <span class="price-save">-25%</span>
+    </div>
+    <a href="/discount/SUNLIGHT25?redirect=/cart/40403778502745:1" class="cta-btn">Add to Cart - &#163;25.74</a>
+  </div>
+
+</div>
+
+<script>
+  // ========== HERO CAROUSEL ==========
+  (function() {
+    var slides = document.getElementById('ss-slides');
+    var dots = document.querySelectorAll('#ss-dots .carousel-dot');
+    var prev = document.getElementById('ss-prev');
+    var next = document.getElementById('ss-next');
+    var carousel = document.getElementById('ss-carousel');
+    if (!slides || !carousel) return;
+
+    var total = dots.length;
+    var current = 0;
+    var autoplayTimer = null;
+
+    function goTo(idx) {
+      current = (idx + total) % total;
+      slides.style.transform = 'translateX(-' + (current * 100) + '%)';
+      dots.forEach(function(d, i) { d.classList.toggle('active', i === current); });
+    }
+    function nextSlide() { goTo(current + 1); }
+    function prevSlide() { goTo(current - 1); }
+    function startAutoplay() {
+      stopAutoplay();
+      autoplayTimer = setInterval(nextSlide, 5000);
+    }
+    function stopAutoplay() {
+      if (autoplayTimer) { clearInterval(autoplayTimer); autoplayTimer = null; }
+    }
+
+    if (next) next.addEventListener('click', function() { nextSlide(); stopAutoplay(); });
+    if (prev) prev.addEventListener('click', function() { prevSlide(); stopAutoplay(); });
+    dots.forEach(function(d) {
+      d.addEventListener('click', function() {
+        goTo(parseInt(d.dataset.slide, 10));
+        stopAutoplay();
+      });
+    });
+
+    // Touch swipe support
+    var touchStartX = 0, touchEndX = 0;
+    carousel.addEventListener('touchstart', function(e) {
+      touchStartX = e.changedTouches[0].screenX;
+    }, { passive: true });
+    carousel.addEventListener('touchend', function(e) {
+      touchEndX = e.changedTouches[0].screenX;
+      var diff = touchStartX - touchEndX;
+      if (Math.abs(diff) > 40) {
+        if (diff > 0) nextSlide(); else prevSlide();
+        stopAutoplay();
+      }
+    }, { passive: true });
+
+    // Start autoplay, pause on hover
+    startAutoplay();
+    carousel.addEventListener('mouseenter', stopAutoplay);
+    carousel.addEventListener('mouseleave', startAutoplay);
+  })();
+
+  // ========== JUDGE.ME WIDGET INIT ==========
+  (function() {
+    function initJdgm() {
+      if (window.jdgm && window.jdgm.customWidgets) {
+        window.jdgm.customWidgets();
+      }
+    }
+    if (window.jdgm) { initJdgm(); }
+    else { document.addEventListener('jdgm.initialized', initJdgm); }
+  })();
+
+  // ========== SMOOTH SCROLL FOR ANCHOR LINKS ==========
+  document.querySelectorAll('.ss-lp a[href^="#"]').forEach(function(a) {
+    a.addEventListener('click', function(e) {
+      e.preventDefault();
+      var target = document.querySelector(this.getAttribute('href'));
+      if (target) target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    });
+  });
+
+  // ========== COUNTDOWN TIMER ==========
+  (function() {
+    var TIMER_KEY = 'ss_lp_timer_end';
+    var TIMER_DURATION = 15 * 60 * 1000; // 15 minutes
+    var timerEl = document.getElementById('ss-timer');
+    var barEl = document.getElementById('ss-countdown-bar');
+
+    // Get or set end time
+    var endTime = localStorage.getItem(TIMER_KEY);
+    if (!endTime || parseInt(endTime) < Date.now()) {
+      endTime = Date.now() + TIMER_DURATION;
+      localStorage.setItem(TIMER_KEY, endTime.toString());
+    } else {
+      endTime = parseInt(endTime);
+    }
+
+    function updateTimer() {
+      var remaining = endTime - Date.now();
+      if (remaining <= 0) {
+        timerEl.textContent = '0:00';
+        // Reset timer for re-engagement
+        endTime = Date.now() + TIMER_DURATION;
+        localStorage.setItem(TIMER_KEY, endTime.toString());
+        return;
+      }
+      var m = Math.floor(remaining / 60000);
+      var s = Math.floor((remaining % 60000) / 1000);
+      timerEl.textContent = m + ':' + (s < 10 ? '0' : '') + s;
+    }
+
+    updateTimer();
+    setInterval(updateTimer, 1000);
+  })();
+
+  // ========== SCROLL FADE-IN ANIMATIONS ==========
+  (function() {
+    var fadeEls = document.querySelectorAll('.ss-lp .fade-in');
+    if (!('IntersectionObserver' in window)) {
+      fadeEls.forEach(function(el) { el.classList.add('visible'); });
+      return;
+    }
+    var observer = new IntersectionObserver(function(entries) {
+      entries.forEach(function(entry) {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.1 });
+    fadeEls.forEach(function(el) { observer.observe(el); });
+  })();
+
+  // ========== MOBILE STICKY CTA SHOW/HIDE ==========
+  (function() {
+    var sticky = document.getElementById('ss-mobile-cta');
+    var heroBtn = document.getElementById('ss-cta-hero');
+    if (!sticky || !heroBtn) return;
+
+    function checkVisibility() {
+      var rect = heroBtn.getBoundingClientRect();
+      if (rect.bottom < 0) {
+        sticky.style.display = 'block';
+      } else {
+        sticky.style.display = 'none';
+      }
+    }
+
+    window.addEventListener('scroll', checkVisibility, { passive: true });
+    checkVisibility();
+  })();
+</script>
