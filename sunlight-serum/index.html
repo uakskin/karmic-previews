@@ -2,6 +2,18 @@
 <!-- Designed for Shopify Pages: paste everything below into the page HTML editor -->
 <!-- Judge.me widget requires Judge.me app installed on the store -->
 
+<script>
+  /* Ensure a mobile viewport meta exists. Shopify themes inject one; standalone previews do not. */
+  (function(){
+    if (!document.querySelector('meta[name="viewport"]')) {
+      var m = document.createElement('meta');
+      m.name = 'viewport';
+      m.content = 'width=device-width, initial-scale=1, viewport-fit=cover';
+      document.head.appendChild(m);
+    }
+  })();
+</script>
+
 <style>
   /* ========== HIDE THEME HEADER, ANNOUNCEMENT BAR & FOOTER ========== */
   .announcement-bar, .header-wrapper, #shopify-section-header,
@@ -13,7 +25,7 @@
   .page-width, .shopify-section-template--page, .template-page,
   .rte, .rte--page, main#MainContent, .main-content,
   .shopify-section, .page-container { max-width: none !important; padding: 0 !important; margin: 0 !important; overflow: visible !important; }
-  html, body { overflow-x: hidden !important; max-width: 100vw !important; }
+  html, body { overflow-x: clip !important; }
   /* ========== RESET & BASE ========== */
   .ss-lp * { margin: 0; padding: 0; box-sizing: border-box; }
   .ss-lp { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; color: #2a2a2a; line-height: 1.6; overflow-x: clip; max-width: 100%; }
@@ -76,8 +88,9 @@
   .ss-lp .carousel-arrow.prev { left: 10px; }
   .ss-lp .carousel-arrow.next { right: 10px; }
   .ss-lp .carousel-dots { display: flex; justify-content: center; gap: 6px; margin-top: 10px; }
-  .ss-lp .carousel-dot { width: 7px; height: 7px; border-radius: 50%; background: #d4c9b5; border: none; cursor: pointer; padding: 0; transition: all 0.2s; }
-  .ss-lp .carousel-dot.active { background: #8B1A2B; width: 22px; border-radius: 100px; }
+  .ss-lp .carousel-dot { width: 24px; height: 24px; background: transparent; border: none; cursor: pointer; padding: 0; position: relative; -webkit-tap-highlight-color: transparent; }
+  .ss-lp .carousel-dot::before { content: ''; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 8px; height: 8px; background: #d4c9b5; border-radius: 50%; transition: all 0.2s; }
+  .ss-lp .carousel-dot.active::before { background: #8B1A2B; width: 22px; border-radius: 100px; }
   @media (min-width: 640px) {
     .ss-lp .hero { padding: 32px 20px; }
     .ss-lp .hero-carousel { max-width: 480px; }
@@ -210,7 +223,7 @@
     .ss-lp .bundle-images img { width: 160px; height: 160px; }
   }
   @media (max-width: 639px) {
-    .ss-lp .mobile-sticky-cta { display: block; }
+    .ss-lp .mobile-sticky-cta.is-visible { display: block; }
     .ss-lp .final-cta { padding-bottom: 100px; }
   }
   @media (min-width: 900px) {
@@ -769,9 +782,9 @@
     function checkVisibility() {
       var rect = heroBtn.getBoundingClientRect();
       if (rect.bottom < 0) {
-        sticky.style.display = 'block';
+        sticky.classList.add('is-visible');
       } else {
-        sticky.style.display = 'none';
+        sticky.classList.remove('is-visible');
       }
     }
 
